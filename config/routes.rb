@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :transactions
+      resources :users
+
+      root to: "users#index"
+    end
   root to: 'home#index'
 
   devise_for :users, path: '/',
