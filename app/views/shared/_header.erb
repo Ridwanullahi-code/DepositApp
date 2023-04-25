@@ -1,0 +1,21 @@
+<% resource = User.new %> <!-- Define the Devise resource variable -->
+<% resource_name = :user %> <!-- Define the Devise resource name -->
+<header class="bg-purple p-3 w-full">
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		<div class="flex gap-2">
+			<div class="w-2/5">
+				<%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-full rounded-md placeholder-purple border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 mb-2", placeholder:"Username...",value: resource.email %>
+				<%= link_to "Forgot password?", new_user_password_path, class: "text-orange-600" %>
+			</div>
+			<div class="w-2/5">
+				<%= f.password_field :password , placeholder:"Password...", class:"w-full rounded-md p-2
+				placeholder-purple mb-2", value: resource.password %>
+				<p class="text-white text-[14px]">Input correct passowrd</p>
+			</div>
+			<div class="flex flex-col gap-2 w-1/4">
+			<input type="submit" value="Login" , class="text-white bg-green p-2 cursor-pointer border border-3 border-green rounded-md">
+				<%= link_to "Register", new_user_registration_path, class: "w-full text-white bg-green p-2 cursor-pointer border-gray-100 rounded-md flex justify-center items-center border-3 border-green"%>
+			</div>
+		</div>
+	  <%end%>
+</header>
