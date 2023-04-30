@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
+  devise_for :adminstrators, path: 'admin',
+   path_names: { sign_in: 'login', sign_out: 'logout', registration: 'register' }
+
   namespace :admin do
       resources :transactions
       resources :users

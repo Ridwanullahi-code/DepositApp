@@ -6,16 +6,23 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
-    before_action :authenticate_admin
-
-    def authenticate_admin
-      # TODO: Add authentication logic here.
-    end
+    before_action :authenticate_adminstrator!
 
     # Override this value to specify the number of elements to display at a time
     # on index pages. Defaults to 20.
     # def records_per_page
     #   params[:per_page] || 20
     # end
+    def after_sign_up_path_for(_resource)
+      admin_root_path
+    end
+
+    def after_sign_in_path_for(_resource)
+      admin_root_path
+    end
+
+    def after_sign_out_path_for(_resource)
+      new_adminstrator_session_path
+    end
   end
 end

@@ -2,7 +2,10 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-const text = document.querySelector('.notice');
-setTimeout(() => {
-    text.classList.toggle('show');
-}, 1500);
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+    document.querySelector(".notice").remove();
+  }, 30000); 
+});
+
+console.log(document.querySelector('.notice'))

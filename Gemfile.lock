@@ -208,7 +208,6 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.8.1)
     regexp_parser (2.8.0)
     reline (0.3.3)
       io-console (~> 0.5)
@@ -254,6 +253,7 @@ GEM
       tzinfo (>= 1.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
+    wdm (0.1.1)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -276,6 +276,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
@@ -287,13 +288,13 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
-  redis (~> 4.0)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
   tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
+  wdm (>= 0.1.0)
   web-console
   webdrivers
 

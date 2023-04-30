@@ -9,7 +9,11 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    balance: Field::String.with_options(searchable: false),
+    balance: Field::String.with_options(
+      searchable: false,
+      prefix: '$',
+      decimal: 2
+    ),
     email: Field::String,
     encrypted_password: Field::String,
     firstname: Field::String,

@@ -9,8 +9,15 @@ class TransactionDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    amount: Field::String.with_options(searchable: false),
-    transaction_type: Field::String,
+    amount: Field::String.with_options(
+      searchable: false,
+      prefix: '$',
+      decimal: 2
+    ),
+    transaction_type: Field::Select.with_options(
+      collection: %w[deposit withdraw],
+      include_blank: false
+    ),
     user: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
