@@ -38,10 +38,8 @@ gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
-
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
