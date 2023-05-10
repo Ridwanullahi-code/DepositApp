@@ -1,11 +1,11 @@
 databases:
-  - name: DepositApp
-    databaseName: DepositApp
-    user: DepositApp_user
+  - name: deposit_app
+    databaseName: deposit_app
+    user: deposit_app_user
 
 services:
   - type: web
-    name: DepositApp
+    name: deposit_app
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
