@@ -106,13 +106,6 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
-    factory_bot (6.2.1)
-      activesupport (>= 5.0.0)
-    factory_bot_rails (6.2.0)
-      factory_bot (~> 6.2.0)
-      railties (>= 5.0.0)
-    faker (3.2.0)
-      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     fugit (1.8.1)
@@ -298,7 +291,6 @@ GEM
       tzinfo (>= 1.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
-    wdm (0.1.1)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -327,12 +319,11 @@ DEPENDENCIES
   capybara
   debug
   devise
-  factory_bot_rails
-  faker
   hotwire-livereload (~> 1.2)
   importmap-rails
   jbuilder
   letter_opener
+  listen (~> 3.7)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
@@ -346,7 +337,6 @@ DEPENDENCIES
   tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
-  wdm (>= 0.1.0)
   web-console
   webdrivers
 

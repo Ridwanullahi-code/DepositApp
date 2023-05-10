@@ -8,8 +8,7 @@ gem 'rufus-scheduler'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
 gem 'devise'
-gem 'factory_bot_rails'
-gem 'faker'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -41,7 +40,7 @@ gem 'jbuilder'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
-gem 'wdm', '>= 0.1.0'
+gem 'listen', '~> 3.7'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem 'bcrypt', '~> 3.1.7'
@@ -59,7 +58,6 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 end
@@ -78,6 +76,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
