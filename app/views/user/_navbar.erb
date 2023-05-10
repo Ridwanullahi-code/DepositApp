@@ -1,0 +1,57 @@
+<nav class="bg-purple md:px-2 py-2 relative">
+		<div class="flex flex-wrap items-center justify-between p-2">
+
+			<p class="flex flex-col px-4 py-2 font-bold text-1xl text-center text-white">
+				User Id <span><%= @user.unique_id%></span>
+			</p>
+				
+			<ul
+				class = "flex text-1xl md:text-[18px]
+				px-2 gap-3  text-white justify-center items-center" 
+			>
+			
+				<li class="w-full hover:bg-gray-600 active:bg-gray-700 md:active:bg-transparent md:hover:bg-transparent text-center duration-75 rounded-md">
+					<p class="block px-4 py-2  font-bold text-1xl">
+						Balance <span class="block">R <%= @user.balance%> </span>
+					</p>
+				</li>
+				<li class="w-full hover:bg-gray-600 active:bg-gray-700 md:active:bg-transparent md:hover:bg-transparent text-center duration-75 rounded-md">
+					<p class="block px-4 py-2  font-bold text-1xl">
+						Bonus <span class="block">R <%= @user.bonus%> </span>
+					</p>
+				</li>
+		</ul>
+
+		<div>
+
+			<div>
+      <button class="relative group harmbugger">
+        <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+          <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 overflow-hidden">
+            <div class="bg-white h-[2px] w-7 transform transition-all  group-focus:w-2/3 delay-150"></div>
+            <div class="bg-white h-[2px] w-7 rounded transform transition-all duration-300"></div>
+            <div class="bg-white h-[2px] w-7 transform transition-all duration-300 group-focus:w-2/3 delay-150"></div>
+          </div>
+        </div>
+      </button>
+    </div>
+
+			<div class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden menu duration-100" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+     <div class="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Edit Profile", edit_user_registration_path %></span>
+    </div>
+		<div cl	ass="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Refer A Friend", new_user_referral_path %></span>
+    </div>
+    <div class="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Deposit", deposit_path %></span>
+    </div>
+     <div class="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= link_to "Withdraw", withdraw_path %></span>
+    </div>
+    <div class="py-1" role="none">
+      <span class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-white" role="menuitem" tabindex="-1", id="menu-item-2"><%= button_to "Logout", destroy_user_session_path, method: :delete %></span>
+    </div>
+  </div>
+	</div>
+</nav>

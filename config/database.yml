@@ -8,14 +8,30 @@ default: &default
 development:
   <<: *default
   database: DepositApp_development
+  local: 
+    service: Disk
+    root: <%= Rails.root.join("storages") %>
 
 test:
   <<: *default
   database: DepositApp_test
+  local:  
+    service: Disk
+    root: <%= Rails.root.join("tmp/storages") %>
 
-
+# On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: DepositApp_production
   username: DepositApp
   password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>

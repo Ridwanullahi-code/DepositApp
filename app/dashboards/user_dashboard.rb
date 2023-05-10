@@ -24,7 +24,7 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_sent_at: Field::DateTime,
     reset_password_token: Field::String,
     transactions: Field::HasMany,
-    user_id: Field::String,
+    unique_id: Field::String,
     username: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
@@ -36,7 +36,7 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    user_id
+    unique_id
     username
     email
     phone_number
@@ -46,7 +46,7 @@ class UserDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
+    unique_id
     balance
     email
     encrypted_password
@@ -58,7 +58,7 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_sent_at
     reset_password_token
     transactions
-    user_id
+    unique_id
     username
     created_at
     updated_at

@@ -1,0 +1,51 @@
+<%= render "message" %>
+<div class="bg-gray-100 h-screen w-90 justify-center items-center flex p-10 md:p-0 relative">
+	<div class="shadow-md rounded-lg absolute bg-white w-5/6 lg:w-3/5">
+		<form class="flex flex-col gap-2 p-6">
+			<div>
+				<div class="flex flex-col gap-1">
+					<label htmlFor="email">Email</label>
+					<input type="email" name="email" id="email" class="p-2 border-gray-200 rounded-md" required />
+				</div>
+				<div class="flex flex-col gap-1">
+					<label htmlFor="phoneNumber">Phone Number</label>
+					<input type="tel" name="number" id="phoneNumber" class="p-2 border-gray-200 rounded-md" required />
+				</div>
+			</div>
+			<hr />
+			<div class="flex flex-col gap-1">
+				<label for="FullName">Full name (on the card)</label>
+				<input type="text" name="fullname" id="FullName" class="p-2 border-gray-200 rounded-md" required />
+			</div>
+			<div class="flex flex-col gap-1">
+				<label for="cardNumber">Card number</label>
+				<input type="text" name="cardNumber" id="cardNumber" class="p-2 border-gray-200 rounded-md" required
+					max-length={16} />
+			</div>
+			<div>
+				<div class="flex flex-col md:flex-row gap-2">
+					<div>
+						<label for="FullName">Expiration</label>
+						<div class="flex md:flex-row flex-col  gap-3">
+							<input type="text" name="" id="FullName" class="p-2 border-gray-200 rounded-md" required
+								placeholder="MM" max-length={2} />
+							<input type="text" name="" id="FullName" class="p-2 border-gray-200 rounded-md" required
+								placeholder="YY" max-length={2} />
+						</div>
+					</div>
+					<div class="md:absolute md:right-6  flex flex-col md:items-center">
+						<label for="FullName">CVC</label>
+						<div class="flex flex-col md:flex-row gap-2">
+							<input type="text" name="" id="FullName" class="p-2 border-gray-200 rounded-md md:w-20 w-full"
+								required max-length={3} />
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="submit"
+				class="w-full bg-blue-600 p-2 text-white my-2 hover:bg-blue-800 active:bg-blue-900 rounded-md border border-blue-600">
+				Withdraw $20.00
+			</button>
+		</form>
+	</div>
+</div>
