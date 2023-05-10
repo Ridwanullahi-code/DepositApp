@@ -8,8 +8,7 @@ gem 'rufus-scheduler'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
 gem 'devise'
-gem 'factory_bot_rails'
-gem 'faker'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -61,7 +60,6 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 end
@@ -80,6 +78,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
