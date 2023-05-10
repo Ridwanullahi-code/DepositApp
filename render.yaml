@@ -1,14 +1,15 @@
 databases:
-  - name: DepositApp
-    databaseName: DepositApp
+  - name: postgres
+    ipAllowList: []
+    databaseName: DepositApp_production
     user: DepositApp
 
 services:
   - type: web
-    name: DepositApp
+    name: rails 
     env: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    startCommand: "bundle exec rails s"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -16,3 +17,8 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+  - type: redis 
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
