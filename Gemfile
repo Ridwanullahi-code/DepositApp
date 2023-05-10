@@ -16,9 +16,11 @@ gem 'sprockets-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+gem 'puma', '~> 6.2', '>= 6.2.2'
+
 gem 'administrate'
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
+
 
 gem 'shoulda-matchers', '~> 4.0'
 
@@ -41,7 +43,7 @@ gem 'jbuilder'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
-gem 'wdm', '>= 0.1.0'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem 'bcrypt', '~> 3.1.7'
