@@ -106,6 +106,7 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     fugit (1.8.1)
       et-orbi (~> 1, >= 1.2.7)
@@ -175,7 +176,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.3-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.5.3)
     pg (1.5.3-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (6.2.2)
@@ -272,6 +276,8 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.28-x64-mingw-ucrt)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.28-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -304,6 +310,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   administrate
