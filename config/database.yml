@@ -24,7 +24,4 @@ test:
 # 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
-  database: DepositApp_poduction
-  username: DepositApp
-  password: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV['DATABASE_URL'] %>

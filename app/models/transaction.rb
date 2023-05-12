@@ -11,7 +11,7 @@ class Transaction < ApplicationRecord
   def handle_transaction
     case transaction_type
     when 'deposit'
-      user.update!(balance: user.balance + amount) if user.unique_id == unique_id
+      # user.update!(balance: user.balance + amount) if user.unique_id == unique_id
     when 'withdraw'
       user.update!(balance: user.balance - amount) if user.unique_id == unique_id && user.balance >= 300
     end
