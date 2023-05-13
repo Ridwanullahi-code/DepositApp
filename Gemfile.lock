@@ -107,7 +107,6 @@ GEM
     et-orbi (1.2.7)
       tzinfo
     ffi (1.15.5)
-    ffi (1.15.5-x64-mingw-ucrt)
     fugit (1.8.1)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
@@ -340,7 +339,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.3p185
+   ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.12
+   2.4.13
